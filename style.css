@@ -1,0 +1,139 @@
+/* Centrage du contenu principal */
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: #181a1b;
+}
+
+/* Centrage du formulaire */
+main {
+    padding: 2.5em 2em;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.40);
+    max-width: 400px;
+    width: 100%;
+    margin: 2em;
+    position: relative;
+    z-index: 1;
+    background: #23272f;
+}
+
+/* Titre */
+main h1 {
+    text-align: center;
+    margin-bottom: 1.5em;
+    color: #e3e6eb;
+}
+
+/* Labels et champs */
+form label {
+    display: block;
+    margin-bottom: 0.3em;
+    font-weight: 500;
+    color: #e3e6eb;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form input[type="date"] {
+    width: 100%;
+    padding: 0.7em;
+    margin-bottom: 1.2em;
+    border: 1px solid #353b48;
+    border-radius: 6px;
+    font-size: 1em;
+    background: #23272f;
+    color: #e3e6eb;
+    transition: border 0.2s, background 0.2s;
+}
+
+form input:focus {
+    border: 1.5px solid #1976d2;
+    outline: none;
+    background: #232f3e;
+}
+
+/* Bouton */
+form button[type="submit"] {
+    width: 100%;
+    padding: 0.9em;
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 0.5em;
+}
+
+form button[type="submit"]:hover {
+    background: #1565c0;
+}
+
+/* Message d'erreur */
+form > div[style] {
+    background: #2d1818;
+    color: #ff6b6b !important;
+    border: 1px solid #ffb3b3;
+    border-radius: 5px;
+    padding: 0.7em 1em;
+    margin-bottom: 1em;
+    font-size: 0.98em;
+}
+
+/* Masquer le message d'erreur s'il est vide */
+form > div[style]:empty {
+    display: none;
+}
+
+/* Page récapitulative */
+main div {
+    background: #23272f;
+    border-radius: 10px;
+    padding: 2em 1.5em;
+    box-shadow: 0 2px 12px rgba(25, 118, 210, 0.07);
+    margin-top: 1em;
+    text-align: center;
+}
+
+main div h2 {
+    color: #42a5f5;
+    margin-bottom: 1em;
+}
+
+main div p {
+    color: #e3e6eb;
+    font-size: 1.05em;
+    margin: 0.5em 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    main {
+        padding: 1.2em 0.5em;
+        max-width: 98vw;
+    }
+    main div {
+        padding: 1em 0.5em;
+    }
+}
+
+/* Box en background */
+.box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+}
