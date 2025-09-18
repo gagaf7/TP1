@@ -61,7 +61,8 @@ form input:focus {
 }
 
 /* Bouton */
-form button[type="submit"] {
+form button[type="submit"],
+.styled-btn {
     width: 100%;
     padding: 0.9em;
     background: #1976d2;
@@ -75,7 +76,8 @@ form button[type="submit"] {
     margin-top: 0.5em;
 }
 
-form button[type="submit"]:hover {
+form button[type="submit"]:hover,
+.styled-btn:hover {
     background: #1565c0;
 }
 

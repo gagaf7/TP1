@@ -61,8 +61,16 @@ document.addEventListener('DOMContentLoaded', function () {
             <p>Email : ${email}</p>
             <p>Téléphone : ${telephone}</p>
             <p>Date de naissance : ${dateNaissance}</p>
+            <button id="retour-btn" class = "styled-btn">Retour</button>
         `;
         main.appendChild(recap);
+
+        // Gérer le bouton retour
+        recap.querySelector('#retour-btn').addEventListener('click', function() {
+            recap.remove();
+            form.reset();
+            form.style.display = '';
+        });
     });
 });
 
